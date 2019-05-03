@@ -36,7 +36,7 @@ public class StoreFront {
 
 	public void runStoreFront() {
 
-		initializeStoreFront();
+		printService.printWelcomeMessage(this.storeFrontName);
 
 		while(menuLevelTracker != done()) {
 			printService.selectCathegoryMessage();
@@ -54,14 +54,8 @@ public class StoreFront {
 		makeTheSalePrint();
 	}
 
-	private void initializeStoreFront() {
-		printService.printWelcomeMessage(this.storeFrontName);
-	}
-
 
 	private void makeInitialChoiceFromInput(String input) {
-
-		printService.selectCathegoryMessage();
 
 		switch(input) {
 		case "1":
@@ -89,6 +83,7 @@ public class StoreFront {
 			return true;
 		case "d":
 			menuLevelTracker = done();
+			chosenType = TYPES.NONE;
 			return true;
 		}
 
@@ -141,7 +136,6 @@ public class StoreFront {
 		}else {
 			menuLevelTracker = main();
 			chosenType = TYPES.NONE;
-			printService.selectCathegoryMessage();
 		}
 	}
 
