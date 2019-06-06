@@ -56,7 +56,6 @@ public class StoreFront {
 
 
 	private void makeInitialChoiceFromInput(String input) {
-
 		switch(input) {
 		case "1":
 			chosenType = TYPES.CANDIES;

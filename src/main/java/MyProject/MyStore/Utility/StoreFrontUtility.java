@@ -27,6 +27,7 @@ public class StoreFrontUtility {
 	private static String separator = File.separator;
 	private static HashMap<String, ErrorEventEntity> errorMessages = new HashMap<>();
 	public static String JSON_EXPORT_ERROR_FILE_PATH;
+	public static String userDir = System.getProperty("user.dir");
 
 	public static ArrayList<StoreItem> fileToObject(String filepath, String itemType, String outputFilePath) {
 

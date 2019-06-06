@@ -17,7 +17,7 @@ public class TestStoreFrontService
      */
     public TestStoreFrontService( String testName )
     {
-        super( testName );
+    	
     }
 
     /**
@@ -25,14 +25,6 @@ public class TestStoreFrontService
      */
     public static Test suite()
     {
-        return new TestSuite( TestStoreFrontService.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+        return new TestSuite(TestStoreFrontService.class);
     }
 }

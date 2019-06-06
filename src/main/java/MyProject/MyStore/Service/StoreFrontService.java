@@ -1,5 +1,6 @@
 package MyProject.MyStore.Service;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,9 +46,9 @@ public class StoreFrontService {
 	private ArrayList<StoreItem> candies = new ArrayList<>();
 
 	public StoreFrontService() {
-		allItemsToList("C:\\Users\\andy.gasparini\\eclipse-workspace\\MyStore\\StoreInventory\\Candies");
-		allItemsToList("C:\\Users\\andy.gasparini\\eclipse-workspace\\MyStore\\StoreInventory\\Desserts");
-		allItemsToList("C:\\Users\\andy.gasparini\\eclipse-workspace\\MyStore\\StoreInventory\\Hardware");
+		allItemsToList(StoreFrontUtility.userDir + File.separator + "StoreInventory\\Candies");
+		allItemsToList(StoreFrontUtility.userDir + File.separator + "StoreInventory\\Desserts");
+		allItemsToList(StoreFrontUtility.userDir + File.separator + "StoreInventory\\Hardware");
 	}
 
 	private void allItemsToList(String folderPath) {
